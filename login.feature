@@ -1,6 +1,7 @@
-Feature: User Login
+Feature: Login functionality
 
-  Scenario: Successful Login
-    Given I am on the login page
-    When I enter valid credentials
-    Then I should be logged in successfully
+  @IPC_LOGIN_001
+  Scenario: Successful login with correct credentials
+    Given a registered user
+    When the user logs in with valid credentials
+    Then access is granted
